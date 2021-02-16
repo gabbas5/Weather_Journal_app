@@ -45,16 +45,22 @@ function saveWeatherData(data) {
     feelings.value = ''
     console.log(weatherData);
 
-    // Post weatherData to route:/lastEntry
-    postWeatherData('lastEntry', weatherData)
-
     // call displayWeatherData
-    displayWeatherData(weatherData);
+    // Post weatherData to route:/lastEntry
+    displayWeatherData(weatherData)
+   .then(function (){postWeatherData('lastEntry', weatherData)});
 }
 
-
 // This function is used to display the weatherData in the browser
-function displayWeatherData(weatherData) {
+const displayWeatherData = async (weatherData) => { 
+    let msg = document.getElementById("message");
+    console.log(weatherData)
+    if (weatherData.date == undefined){
+        let message = " Please enter zip code and click on the generate button to get your weather forecast!"
+        msg.innerHTML = message;
+        return;
+    }
+    msg.innerHTML = ''
     let dateInfo = `<p> ${weatherData.date} ${weatherData.time}</p>`
     let dateDiv = document.getElementById("date");
     dateDiv.innerHTML = dateInfo;
@@ -74,7 +80,7 @@ function displayWeatherData(weatherData) {
     let contentInfo = `<p>humidity: ${weatherData.humidity} &#37, wind speed: ${weatherData.wind} mph </p>`
     let contentDiv = document.getElementById("content");
     contentDiv.innerHTML = contentInfo;
-
+   
     let myFeelingsInfo = `<p>I am feeling: ${weatherData.feelings} </p>`
     let myFeelingsDiv = document.getElementById("myFeelings");
     myFeelingsDiv.innerHTML = myFeelingsInfo;

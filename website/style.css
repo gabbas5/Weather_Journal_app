@@ -72,6 +72,11 @@ body{
 #content{
     color: #e9b31e;   
 }
+#message{
+    color:#e9b31e;
+    font-size: 30px; 
+    font-weight: 700; 
+}
 
 .headline {
     display: flex;
