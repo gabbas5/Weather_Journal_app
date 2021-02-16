@@ -1,0 +1,191 @@
+html, body
+{
+    height: 100vh;
+}
+
+body{
+    background: #008274;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    background-image: linear-gradient(to right top, #2b4d59, #00706f, #279061, #82a93b, #e9b31e);
+    padding:10px;
+    height: 95%;
+    border-radius: 40px;
+    box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+}
+
+.entry{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    text-align: center;
+}
+
+#entryHolder{
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+    text-align: center;
+    border: 1px solid white;
+}
+
+#date{
+    color:#2B4D59;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+#temp{
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    align-items: center;
+    color:#ffffff;
+    font-weight: 800;
+    font-size: 40px;
+}
+
+
+#description{
+    font-size: 20px;
+    color: #e9b31e; 
+}
+
+#myFeelings{
+    color:#ffffff;
+}
+
+#location{
+    color:#ffffff;
+    font-weight: 800;
+    font-size: 30px;
+}
+
+#content{
+    color: #e9b31e;   
+}
+
+.headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    color: #ffffff;
+}
+
+.title{
+    color:#ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+}
+
+/*  Basic Styling To Override Default For Basic HTML Elements */
+label{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 15px;
+    color:#ffffff;
+}
+
+input{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    width: 180px;
+    background:#2B4D59;
+    color: rgb(221, 221, 221);
+    border:none;
+    border-radius: 50px;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    margin: 5px auto;
+    text-align: center;
+    box-shadow: 10px 10px 14px 1px rgba(00,00,00,0.2);
+    letter-spacing: 0.094em;
+}
+
+button{
+    width: 220px;
+    height: 50px;
+    margin: 10px auto;
+    background: #E9B31E;
+    color: #ffffff;
+    font-size: 26px;
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 2px 4px 5px #444;
+}
+
+h1{
+    font-size: 36px;
+}
+
+p{ 
+    margin: 5px 0;
+    
+}
+ul{
+    padding: 0;
+}
+
+li{
+    list-style-type: none;
+    
+}
+#feelings{
+    display: flex;
+    width: 75%;
+    margin: 5px auto;
+    padding-left: 15px;
+    border-radius: 20px;
+    background:#ffffff;
+    color: rgb(34, 34, 34);
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+}
+#errorMessage{
+    color: rgb(202, 19, 19);
+    font-weight:800;
+
+}
+
+/* Reset style for HTML element on active to have no border*/
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+/* Style for Placeholder Text*/
+::placeholder { /* Firefox, Chrome, Opera */ 
+    color:rgb(221, 221, 221); 
+    font-family: 'Oswald', sans-serif;
+    padding-left: 5px;
+
+} 
+  
+:-ms-input-placeholder { /* Internet Explorer 10-11 */ 
+    color: rgb(221, 221, 221); 
+    font-family: 'Oswald', sans-serif;
+
+} 
+  
+::-ms-input-placeholder { /* Microsoft Edge */ 
+    color: rgb(221, 221, 221); 
+    font-family: 'Oswald', sans-serif;
+
+} 
